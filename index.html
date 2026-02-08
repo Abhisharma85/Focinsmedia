@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Focins Media | Regional Influencer Marketing Agency</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  color: #222;
+  background: #fff;
+}
+
+/* ================= HEADER ================= */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 8%;
+}
+
+header img {
+  height: 60px;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.btn {
+  background: linear-gradient(135deg, #4f46e5, #9333ea);
+  color: white;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ================= HERO ================= */
+.hero-split {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 8% 60px; /* 🔥 reduced top space */
+  gap: 50px;
+}
+
+.hero-text h1 {
+  font-size: 37px;
+  margin-bottom: 12px;
+}
+
+.hero-text p {
+  font-size: 18px;
+  margin-bottom: 22px;
+  color: #555;
+  max-width: 520px;
+}
+
+/* Animated Social Visual */
+.hero-visual-animated {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.bubble {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  color: white;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  animation: float 6s ease-in-out infinite;
+}
+
+.instagram { background: linear-gradient(135deg,#f58529,#dd2a7b,#8134af); top:20px; left:20px;}
+.youtube { background:#ff0000; top:60px; right:20px; animation-delay:1s;}
+.likes { background:linear-gradient(135deg,#ff4d6d,#ff758f); bottom:40px; left:20px; animation-delay:2s;}
+.reach { background:linear-gradient(135deg,#4f46e5,#9333ea); bottom:20px; right:40px; font-size:14px; animation-delay:3s;}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+  100% { transform: translateY(0); }
+}
+
+/* ================= SECTIONS ================= */
+.section {
+  padding: 60px 8%; /* 🔥 reduced from 80px */
+  text-align: center;
+}
+
+
+.section h2 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  margin: 12px auto 0;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #4f46e5, #9333ea);
+}
+
+/* Highlight Paragraph */
+.highlight-text {
+  font-size: 17px;
+  line-height: 1.7;
+  max-width: 760px;
+  margin: 18px auto 0;
+  padding: 18px 22px;
+  background: linear-gradient(
+    135deg,
+    rgba(79,70,229,0.08),
+    rgba(147,51,234,0.08)
+  );
+  border-radius: 16px;
+}
+
+.highlight-text span {
+  font-weight: 700;
+  background: linear-gradient(135deg, #4f46e5, #9333ea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ================= HOW IT WORKS ================= */
+.work-flow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.work-step {
+  background: #fff;
+  padding: 32px 22px;
+  border-radius: 18px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  transition: transform .3s ease;
+}
+
+.work-step:hover {
+  transform: translateY(-8px);
+}
+#how-it-works {
+  padding-top: 0px;
+}
+
+.work-step span {
+  width: 46px;
+  height: 46px;
+  line-height: 46px;
+  display: inline-block;
+  border-radius: 50%;
+  background: linear-gradient(135deg,#4f46e5,#9333ea);
+  color:#fff;
+  font-weight:700;
+  margin-bottom:14px;
+}
+
+/* ================= CTA CARDS ================= */
+.cards {
+  display: flex;
+  gap: 24px;
+  margin-top: 35px;
+  justify-content: center;   /* center pills */
+  flex-wrap: wrap;           /* safe on smaller screens */
+}
+
+.card {
+  background: linear-gradient(135deg,#4f46e5,#9333ea);
+  color:#fff;
+  padding: 18px 26px;        /* smaller height */
+  border-radius: 999px;      /* pill shape */
+  font-weight: 700;
+  font-size: 15px;
+  text-align: center;
+  white-space: nowrap;       /* keep text in one line */
+
+  box-shadow: 0 16px 35px rgba(79,70,229,.35);
+  transition: transform .3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+footer {
+  background: #0f0f14;
+  color: #bbb;
+  padding: 7px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto 25px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 🔥 one line, 4 columns */
+  gap: 30px;
+  align-items: start;
+}
+
+/* Footer section text */
+.footer-section h4 {
+  font-size: 15px;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.footer-section a {
+  font-size: 14px;
+  color: #bbb;
+  text-decoration: none;
+}
+.footer-bottom{
+  text-align: center;
+}
+
+.footer-section a:hover {
+  color: #fff;
+}
+
+/* 📱 Mobile: stack vertically */
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 20px;
+  }
+}
+@media (max-width: 640px) {
+  .footer-bottom {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+}
+/* ================= MOBILE RESPONSIVE FIX ================= */
+@media (max-width: 768px) {
+
+  /* Header */
+  header {
+    padding: 12px 6%;
+    margin-left: -7px;
+  }
+
+  header img {
+    height: 46px;
+  }
+
+  nav a {
+    margin-left: 12px;
+    font-size: 12px;
+  }
+
+  .btn {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+
+  /* Hero */
+  .hero-split {
+    flex-direction: column;
+    padding: 30px 6% 40px;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  /* Hero animation bubbles */
+  .hero-visual-animated {
+    width: 240px;
+    height: 240px;
+  }
+
+  .bubble {
+    width: 70px;
+    height: 70px;
+    font-size: 13px;
+  }
+
+  /* Sections */
+  .section {
+    padding: 40px 6%;
+  }
+
+  .section h2 {
+    font-size: 26px;
+  }
+
+  .highlight-text {
+    font-size: 15px;
+    padding: 16px 18px;
+  }
+
+  /* How it works */
+  #how-it-works {
+    padding-top: 10px;
+  }
+
+  .work-flow {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .work-step {
+    padding: 26px 18px;
+  }
+
+  .work-step h3 {
+    font-size: 16px;
+  }
+
+  .work-step p {
+    font-size: 14px;
+  }
+
+  /* CTA Pills */
+  .cards {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .card {
+    white-space: normal;
+    font-size: 14px;
+    padding: 14px 20px;
+  }
+/* ================= FOOTER (DESKTOP FIXED) ================= */
+
+  /* NAVBAR MOBILE FIX *
+
+/* ================= MOBILE NAVBAR SIMPLE ================= */
+@media (max-width: 640px) {
+
+  /* Hide unwanted links */
+  .nav-brands,
+  .nav-creators {
+    display: none;
+  }
+
+  /* Keep About + Join visible */
+  .nav-about,
+  .nav-join {
+    display: inline-block;
+  }
+
+  /* Align nav to right */
+  header {
+    justify-content: space-between;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+  }
+
+  nav a {
+    margin-left: 10px;
+    font-size: 14px;
+  }
+
+  .btn.nav-join {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+}
+
+/* MOBILE HERO OPTIMIZATION */
+@media (max-width: 768px) {
+
+  .hero-text h1 {
+    font-size: 26px;
+    line-height: 1.3;
+  }
+
+  .hero-text p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .hero-text .btn {
+    width: 100%;
+    display: inline-block;
+    margin-top: 10px;
+  }
+
+  .hero-visual-animated {
+    width: 200px;
+    height: 200px;
+  }
+
+  .bubble {
+    width: 60px;
+    height: 60px;
+    font-size: 12px;
+  }
+}
+
+}
+</style>
+
+ </head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+  <img src="logo.png" alt="Focins Media Logo">
+
+  <nav class="nav-links">
+  <a href="#about" class="nav-about">About</a>
+  <a href="#" class="nav-brands">Brands</a>
+  <a href="#" class="nav-creators">Creators</a>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSeuMrjMFMW3UdsLj-sIDLgaXUgu5F-y0mf8rRwX-o0uxtMDnQ/viewform?usp=header" class="btn nav-join">Join as Creator</a>
+</nav>
+</header>
+
+  <!-- HERO -->
+  <section class="hero-split">
+    <div class="hero-text">
+      <h1>Grow Your Business with Influencer Marketing</h1>
+      <p>
+        Focins Media helps Delhi NCR brands grow faster using trusted
+        regional influencers and performance-driven campaigns.
+      </p>
+      <a href="#" class="btn">Work With Us</a>
+    </div>
+
+    <div class="hero-visual-animated">
+      <div class="bubble instagram">IG</div>
+      <div class="bubble youtube">YT</div>
+      <div class="bubble likes">❤</div>
+      <div class="bubble reach">+Reach</div>
+    </div>
+  </section>
+  <section class="section gray" id="how-it-works">
+  <h2>How It Works</h2>
+
+  <p class="highlight-text">
+    A simple, transparent process designed to help
+    <span>Delhi NCR brands</span> grow faster with
+    <span>regional influencer marketing</span>.
+  </p>
+
+  <div class="work-flow">
+    <div class="work-step">
+      <span>01</span>
+      <h3>Brand Requirement</h3>
+      <p>Brands share campaign goals, target area, and budget with us.</p>
+    </div>
+
+    <div class="work-step">
+      <span>02</span>
+      <h3>Creator Activation</h3>
+      <p>We select trusted Delhi NCR creators with relevant local audience.</p>
+    </div>
+
+    <div class="work-step">
+      <span>03</span>
+      <h3>Campaign Execution</h3>
+      <p>Creators publish content and drive online + offline impact.</p>
+    </div>
+
+    <div class="work-step">
+      <span>04</span>
+      <h3>Tracking & Growth</h3>
+      <p>Brands receive performance reports, insights, and ROI metrics.</p>
+    </div>
+  </div>
+</section>
+  <section class="section" id="about">
+  <h2>Why Choose Focins Media?</h2>
+
+  <p class="highlight-text">
+    We are a <span>Delhi NCR–focused</span> regional influencer marketing agency
+    helping brands achieve <span>faster offline & online growth</span>.
+  </p>
+
+  <div class="cards">
+    <div class="card">🚀 Fast Offline & Local Campaigns</div>
+    <div class="card">📍 Creators with Local Audience Trust</div>
+    <div class="card">📊 Smart Campaign Tracking & Reporting</div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+
+  <!-- FOOTER -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-section">
+      <h4>Follow Us</h4>
+      <a href="https://www.instagram.com/focinsmedia" target="_blank">
+        📸 Instagram
+      </a>
+    </div>
+
+    <div class="footer-section">
+      <h4>Contact Us</h4>
+      <a href="mailto:contact@focinsmedia.com">
+        📧 contact@focinsmedia.com
+      </a>
+    </div>
+    <div class="footer-section">
+      <h4>Privacy Policy</h4>
+      <a href="privacy.html">Privacy Policy </a>
+    </div>
+    <div class="footer-section">
+      <h4>Terms & conditions</h4>
+      <a href="terms.html">Terms & Conditions</a>
+    </div>
+  </div>
+
+  <p class="footer-bottom">
+    © 2026 Focins Media — India’s First Regional Influencer Marketing Agency
+  </p>
+</footer>
+
+</body>
+</html>
